@@ -48,7 +48,7 @@ function mostrarPelicula() {
 
     peticion = true;
     let peliBuscada = document.getElementById("buscador").value;
-    fetch("http://www.omdbapi.com/?apikey=308558b&s=" + peliBuscada + "&page=" + contadorPagina + "&type=" + tipo, { method: "GET" })
+    fetch("https://www.omdbapi.com/?apikey=308558b&s=" + peliBuscada + "&page=" + contadorPagina + "&type=" + tipo, { method: "GET" })
         .then((res) => res.json())
         .then((datosRecibidos) => {
             if (datosRecibidos.totalResults == undefined) {
@@ -66,7 +66,7 @@ function mostrarPelicula() {
             }
 
             const promesas = datosRecibidos.Search.map((pelicula) =>
-                fetch(`http://www.omdbapi.com/?apikey=308558b&i=${pelicula.imdbID}`, { method: "GET" })
+                fetch(`https://www.omdbapi.com/?apikey=308558b&i=${pelicula.imdbID}`, { method: "GET" })
                     .then((res) => res.json())
             );
 
@@ -125,7 +125,7 @@ function scrollInfinito() {
 }
 
 function mostrarDescripcion(imdbID) {
-    fetch(`http://www.omdbapi.com/?apikey=308558b&i=${imdbID}`)
+    fetch(`https://www.omdbapi.com/?apikey=308558b&i=${imdbID}`)
         .then((res) => res.json())
         .then((pelicula) => {
             document.body.style.overflow = "hidden";
