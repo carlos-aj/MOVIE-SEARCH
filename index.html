@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="./index.css"> 
+    <script src="./index.js"></script>
+    <script src="https://kit.fontawesome.com/cb2a722609.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="busqueda">
+        <form>
+            <select id="tipo" name="PeliculaSerie">
+                <option value="">All</option>
+                <option value="movie">Movies</option>
+                <option value="series">Series</option>
+            </select>
+        </form>
+        <input type="text" id="buscador" placeholder="Movie...">
+        <h2 id="informe"></h2>
+        <h2 id="numeroResultados"></h2>
+    </div>
+    <div>
+        <h2 id="tipoSeleccionado"></h2>
+    </div>
+    <div id="lista">
+
+    </div>
+    <div id="cargado">
+        <div id="spinner">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+        </div>
+    </div>
+</body>
+</html>
+
